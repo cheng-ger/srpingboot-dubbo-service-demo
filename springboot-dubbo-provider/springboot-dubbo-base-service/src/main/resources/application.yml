@@ -1,0 +1,29 @@
+server:
+  port: 60001
+projectName: springboot-dubbo-provider
+spring:
+  application:
+    name: ${projectName}
+
+
+
+# dubbo 配置
+## 注册中心
+### 注册中心的地址
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  ## 提供方
+  ### 提供方的项目名称
+  application:
+    name: springboot-dubbo-provider
+#    超时时间
+  consumer:
+    timeout: 10000
+  protocol:
+### dubbo 的名称
+    name: dubbo
+### dubbo 的端口（-1 表示随机端口号）
+    port: -1
+
+
